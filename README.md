@@ -13,20 +13,22 @@
 
 ## Installation
 first clone the project
-```bash
-git clone https://github.com/TheAwiteb/satr-statistics-maker
+```
+λ git clone https://github.com/TheAwiteb/satr-statistics-maker
 ```
 install packages from [`requirements.txt`](requirements.txt)
 ```bash
-cd satr-statistics-maker
-pip3 install -r requirements.txt
+λ cd satr-statistics-maker
+λ pip3 install -r requirements.txt
 ```
 
 ## Run
 The way to run ssma is very simple, after entering the project path, run it like this
 > Note: use `py` command instead of `python3` if you are a Windows user
-```bash
-python3 ssma
+```
+λ python3 ssma
+Enter your username in satr.codes: yourusername
+Enter badges size (default 90): 
 ```
 ## Output
 <h2 align='center'>Completed <a href='https://Satr.codes'>Satr</a> courses</h2>
