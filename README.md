@@ -28,6 +28,14 @@ The way to run ssma is very simple, after entering the project path, run it like
 ```bash
 python3 ssma
 ```
+## Output
+<h2 align='center'>Completed <a href='https://Satr.codes'>Satr</a> courses</h2>
+
+<div align='center'>
+    <a target='_blank' href='https://satr.codes/courses/rRUQyVDkwQ/view'><img align='center' alt='Python 101' src='https://assets.safcsp.cloud/badges/badges-45.png' width='90' height='90'/></a>
+    <a target='_blank' href='https://satr.codes/courses/VIvMvhyCiV/view'><img align='center' alt='Python 102' src='https://assets.safcsp.cloud/badges/badges-45.png' width='90' height='90'/></a>
+    <a target='_blank' href='https://satr.codes/courses/MvNhowmHeB/view'><img align='center' alt='Python 103' src='https://assets.safcsp.cloud/badges/badges-45.png' width='90' height='90'/></a>
+</div>
 
 ## Donating
 
