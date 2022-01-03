@@ -39,14 +39,15 @@ Enter badges size (default 90):
     <a target='_blank' href='https://satr.codes/courses/MvNhowmHeB/view'><img align='center' alt='Python 103' src='https://assets.safcsp.cloud/badges/badges-45.png' width='90' height='90'/></a>
 </div>
 
-## Donating
+## Donating (BEP20)
 
 |    Currency          |                Address                          |
 | ---------------------|------------------------------------------------ |
-| Ethereum  **ETH**| ```0xdFb0E92827E71DdF48a3a57D1fc647DfFe1383B7```|
-| Binance USD **BUSD**  | ```0xdFb0E92827E71DdF48a3a57D1fc647DfFe1383B7```|
-| Bitcoin **BTC**  | ```1FUf2Gtto4TBJtZ7g1Au45VS8TwHpWxGSV```|
-| Bitcoin Cash **BCH**| ```bitcoincash:qzsnd7ds5a4mkxl7nx000cw347jxfzardv0zhazhkw```|
+| Binance **BNB**| 0x009987919CfeA8dF54F69436E5d7202B3e3430eE|
+| Binance USD **BUSD**  | 0x009987919CfeA8dF54F69436E5d7202B3e3430eE|
+| Tether **USDT** | 0x009987919CfeA8dF54F69436E5d7202B3e3430eE |
+| Bitcoin **BTC**  | 0x009987919CfeA8dF54F69436E5d7202B3e3430eE|
+| Bitcoin Cash **BCH**|0x009987919CfeA8dF54F69436E5d7202B3e3430eE|
 
 ## License
 Massachusetts Institute of Technology (MIT). Please see [License file](LICENSE) for more information.
