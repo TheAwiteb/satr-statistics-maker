@@ -22,13 +22,27 @@ install packages from [`requirements.txt`](requirements.txt)
 λ pip3 install -r requirements.txt
 ```
 
+## Using
+```
+usage: ssma [-h] --username  [--size]
+
+Tool that helps you collect your badges in a satr platform.
+
+optional arguments:
+  -h, --help        show this help message and exit
+  
+  --username , -u   The username you want to get badges for.
+
+  --size , -s       The size of badge in html (default 90.0).
+```
+
 ## Run
 The way to run ssma is very simple, after entering the project path, run it like this
 > Note: use `py` command instead of `python3` if you are a Windows user
+
+> Note: Make sure you are in the repository when running the command
 ```
-λ python3 ssma
-Enter your username in satr.codes: yourusername
-Enter badges size (default 90): 
+λ python3 ssma -u yourusername
 ```
 ## Output
 <h2 align='center'>Completed <a href='https://Satr.codes'>Satr</a> courses</h2>
@@ -43,11 +57,11 @@ Enter badges size (default 90):
 
 |    Currency          |                Address                          |
 | ---------------------|------------------------------------------------ |
-| Binance **BNB**| 0x009987919CfeA8dF54F69436E5d7202B3e3430eE|
-| Binance USD **BUSD**  | 0x009987919CfeA8dF54F69436E5d7202B3e3430eE|
-| Tether **USDT** | 0x009987919CfeA8dF54F69436E5d7202B3e3430eE |
-| Bitcoin **BTC**  | 0x009987919CfeA8dF54F69436E5d7202B3e3430eE|
-| Bitcoin Cash **BCH**|0x009987919CfeA8dF54F69436E5d7202B3e3430eE|
+| Binance **BNB**| ```0x4ab0974c7dfcdcdf24d8323a93b061d41e9cf3f0```|
+| Binance USD **BUSD**  | ```0x4ab0974c7dfcdcdf24d8323a93b061d41e9cf3f0```|
+| Tether **USDT** | ```0x4ab0974c7dfcdcdf24d8323a93b061d41e9cf3f0``` |
+| Bitcoin **BTC**  | ```0x4ab0974c7dfcdcdf24d8323a93b061d41e9cf3f0```|
+| Bitcoin Cash **BCH**| ```0x4ab0974c7dfcdcdf24d8323a93b061d41e9cf3f0```|
 
 ## License
 Massachusetts Institute of Technology (MIT). Please see [License file](LICENSE) for more information.
