@@ -26,7 +26,9 @@ import asyncio
 import requests
 import aiohttp
 import argparse
-from typing import List, Awaitable
+from time import time
+from colorama import Fore, init
+from typing import List, Tuple, Awaitable
 
 parser = argparse.ArgumentParser(
     description="Tool that helps you collect your badges in a satr platform."
@@ -36,7 +38,6 @@ parser.add_argument(
     "-u",
     metavar="",
     action="store",
-    required=True,
     type=str,
     help="The username you want to get badges for.",
 )
@@ -50,7 +51,15 @@ parser.add_argument(
     help="The size of badge in html (default 90.0).",
 )
 
+parser.add_argument(
+    "--prompt",
+    action="store_true",
+    default=False,
+    help="Prompt for get username and badge size (default False).",
+)
+
 args = parser.parse_args()
+init(autoreset=True)
 
 safcsp_api = "https://api.safcsp.cloud/"
 
@@ -145,7 +154,7 @@ def _get_user_id(username: str) -> str:
     if response.status_code == 200:
         return response.json().get("user_information", {}).get("id")
     else:
-        raise Exception(f"No information about {username}")
+        raise Exception(f"No information about '{username}'")
 
 
 def get_courses_badge(username: str) -> List[dict]:
@@ -166,10 +175,42 @@ def get_courses_badge(username: str) -> List[dict]:
     ]
 
 
+def get_username_and_size() -> Tuple[str, float]:
+    """Returns the username and badge size from user
+
+    Raises:
+        ValueError: Invalid badge size
+
+    Returns:
+        Tuple[str, float]: username and badge size
+    """
+    username = input(
+        f"Enter {Fore.BLUE}https://Satr.codes{Fore.RESET} username: {Fore.CYAN}"
+    ).strip()
+    size = (
+        input(
+            f"{Fore.RESET}Enter badge size (default {Fore.CYAN}90.0{Fore.RESET}): {Fore.CYAN}"
+        ).strip()
+        or "90.0"
+    )
+    print(end=Fore.RESET)  # reset color
+    if size.replace(".", "").isnumeric():
+        return username, float(size)
+    raise ValueError("size should be a float or integer")
+
+
 async def main():
+    if args.prompt:
+        args.username, args.size = get_username_and_size()
+
+    elif args.username is None:
+        parser.error("You must provide a username, or prompt to ask you about it.")
+
+    start = time()
     async with aiohttp.ClientSession() as session:
         badges = get_courses_badge(args.username)
         print(await courses_parse(badges=badges, size=args.size, session=session))
+    print(f"\nEnd in {Fore.GREEN}{round(time() - start, 4)}{Fore.RESET} seconds!")
 
 
 if __name__ == "__main__":
