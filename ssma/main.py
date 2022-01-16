@@ -106,13 +106,12 @@ async def course_parse(
     Returns:
         str: badge with course url as html
     """
-    text = "<h2 align='center'>Completed <a href='https://Satr.codes'>Satr</a> courses</h2>\n\n<div align='center'>"
+    
     course_name = "".join(filter(str.isascii, badge["title"])).strip()
     badge_text = f"""<a target='_blank' href='{await get_course_url(course_name, session)}'>
         \r    <img align='center' alt='{course_name}' src='{badge['image_url']}' width='{size}' height='{size}'/>
         \r</a>\n"""
-    text += badge_text
-    return text + "</div>"
+    return  badge_text
 
 
 def get_courses_badge_tasks(
@@ -133,9 +132,10 @@ async def courses_parse(
     Returns:
         str: badges with courses url as html
     """
+    text = "<h2 align='center'>Completed <a href='https://Satr.codes'>Satr</a> courses</h2>\n\n<div align='center'>"
     tasks = get_courses_badge_tasks(badges, size, session)
     texts = await asyncio.gather(*tasks)
-    return "\n".join(texts)
+    return text + "".join(texts) + "</div>"
 
 
 def _get_user_id(username: str) -> str:
