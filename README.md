@@ -37,11 +37,18 @@ optional arguments:
 ```
 
 ## Run
+### with docker
+pull from [docker hub](https://hub.docker.com) (No need to clone the repository)
+```bash
+λ docker run --rm -it awiteb/ssma
+```
+### without docker
 The way to run ssma is very simple, after entering the project path, run it like this
 > Note: use `py` command instead of `python3` if you are a Windows user
 
 > Note: Make sure you are in the repository when running the command
 ```
+λ pip3 install -r requirements.txt
 λ python3 ssma -u yourusername
 ```
 ## Output
